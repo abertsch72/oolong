@@ -3,9 +3,27 @@
 A challenging aggregation benchmark for long-context models; full code and eval scripts release coming soon! See the [paper](https://arxiv.org/abs/2511.02817) for details
 
 
+## Running Oolong
+The example inference script assumes you use LiteLLM as a wrapper around your API of choice. 
+
+set up:
+```
+pip install -r requirements.txt
+export LITELLM_API_KEY="sk-[your key]"
+```
+
+inference:
+```
+python src/eval/eval_script_batched.py --model [modelname] --dataset [synth or real]
+```
+
+You can set maximum and minimum input example lengths; Oolong-real will also attempt to infer the maximum input length from the model provided.
+
+## More soon!
+
 Release status:
-- [ ] Output scoring scripts for both splits
-- [ ] API inference script
+- [x] Output scoring scripts for both splits
+- [x] API inference script
 - [ ] Oolong-synth construction code
 - [ ] Validated splits of each Oolong-synth source dataset 
 - [ ] Oolong-real construction code
