@@ -216,12 +216,12 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
                 # save partial and full output for this batch
 
                 with jsonlines.open(
-                    f"{results_dir}/{safemodelname}/full_output.jsonl", "a"
+                    f"{results_dir}/{dataset}/{safemodelname}/full_output.jsonl", "a"
                 ) as f:
                     for line in current_outputs:
                         f.write(line)
                 with jsonlines.open(
-                    f"{results_dir}/{safemodelname}/partial_output_{output_counter - len(this_window_data)}_{output_counter - 1}.jsonl",
+                    f"{results_dir}/{dataset}/{safemodelname}/partial_output_{output_counter - len(this_window_data)}_{output_counter - 1}.jsonl",
                     "w",
                 ) as f:
                     for line in current_outputs:
@@ -269,12 +269,12 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
                 # save partial and full output for this batch
 
                 with jsonlines.open(
-                    f"{results_dir}/{safemodelname}/full_output.jsonl", "a"
+                    f"{results_dir}/{dataset}/{safemodelname}/full_output.jsonl", "a"
                 ) as f:
                     for line in current_outputs:
                         f.write(line)
                 with jsonlines.open(
-                    f"{results_dir}/{safemodelname}/partial_output_{output_counter - len(batch)}_{output_counter - 1}.jsonl",
+                    f"{results_dir}/{dataset}/{safemodelname}/partial_output_{output_counter - len(batch)}_{output_counter - 1}.jsonl",
                     "w",
                 ) as f:
                     for line in current_outputs:
@@ -284,7 +284,7 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
 
 
     except Exception as e:
-        error_file_loc = f"{results_dir}/{safemodelname}/error_partial_results.jsonl"
+        error_file_loc = f"{results_dir}/{dataset}/{safemodelname}/error_partial_results.jsonl"
         with jsonlines.open(error_file_loc, "w") as f:
             for line in all_outputs:
                 f.write(line)
@@ -295,11 +295,11 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
         )
 
 
-    with jsonlines.open(f"{results_dir}/{safemodelname}/full_output.jsonl", "a") as f:
+    with jsonlines.open(f"{results_dir}/{dataset}/{safemodelname}/full_output.jsonl", "a") as f:
         for line in current_outputs:
             f.write(line)
 
-    with open(f"{results_dir}/{safemodelname}/overall.txt", "w") as f:
+    with open(f"{results_dir}/{dataset}/{safemodelname}/overall.txt", "w") as f:
         summary = f"Overall score for {model} on {len(data)} examples: {correct}/{len(data)} = {correct / len(data)}"
         print(summary)
         f.write(summary)

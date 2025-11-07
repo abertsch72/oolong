@@ -17,6 +17,8 @@ inference:
 python src/eval/eval_script_batched.py --model [modelname] --dataset [synth or real]
 ```
 
+This will run inference with batch size 1; you can set a batch size with `--batch_size`, or pass `--batch_by_context_window` to pass a single example from each context window to seed the cache and then the remainder of examples from that window in a single batch. 
+
 You can set maximum and minimum input example lengths; Oolong-real will also attempt to infer the maximum input length from the model provided.
 
 ## More soon!
