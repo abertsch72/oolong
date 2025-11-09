@@ -1,17 +1,12 @@
-import litellm
-from datasets import load_dataset
-import jsonlines
-import dateutil
-
-from itertools import batched
-from datetime import datetime
 import os
-import ast
-import sys
+from itertools import batched
 from pathlib import Path
 
-from eval_helpers import synth_process_response, dnd_process_response
-from utils import filter_by_context_length
+import jsonlines
+import litellm
+from datasets import load_dataset
+from eval_helpers import dnd_process_response, synth_process_response
+from utils import compute_context_lengths
 
 
 def interpret_litellm_output(datapoint, model, output, response_processor):
@@ -25,73 +20,82 @@ def interpret_litellm_output(datapoint, model, output, response_processor):
             "parse_confidence": "ERROR",
             "full_answer": "ERROR",
             "score": 0,
-            "context_len": datapoint['context_len'],
-            "task_group":  datapoint['task_group'],
-            "task":  datapoint['task'],
-            "answer_type":  datapoint['answer_type'],
-            "answer": str(datapoint['answer'].strip('[').strip(']')),
+            "context_len": datapoint["context_len"],
+            "task_group": datapoint["task_group"],
+            "task": datapoint["task"],
+            "answer_type": datapoint["answer_type"],
+            "answer": str(datapoint["answer"].strip("[").strip("]")),
         }
         print("WARNING:ERROR")
     else:
         output = output["choices"][0]["message"]["content"]
         if output is None:
-            if output['choices'][0]['finish_reason'] == 'content_filter':
-                output="CONTENT_FILTERED"
+            if output["choices"][0]["finish_reason"] == "content_filter":
+                output = "CONTENT_FILTERED"
                 print("WARNING: CONTENT FILTERED")
             else:
                 raise ValueError("empty output!")
         this_output = response_processor(datapoint, output, model)
-    
 
     return this_output
 
 
-def launch(model, dataset, reasoning_level, labels, batch_by_context_window, batch_size, max_context_len, min_context_len, model_prefix, base_url):
-    split_to_use="context_window_text"
+def launch(
+    model,
+    dataset,
+    reasoning_level,
+    labels,
+    batch_by_context_window,
+    batch_size,
+    max_context_len,
+    min_context_len,
+    model_prefix,
+    base_url,
+):
+    split_to_use = "context_window_text"
     api_args = {}
 
     # download data
     if dataset == "synth":
-        data = load_dataset(f"oolongbench/oolong-synth")["test"]
+        data = load_dataset("oolongbench/oolong-synth")["test"]
         process_response = synth_process_response
     else:
-        data = load_dataset(f"oolongbench/oolong-real", 'dnd')["test"]
+        data = load_dataset("oolongbench/oolong-real", "toy_dnd")["test"]
         process_response = dnd_process_response
-        data = filter_by_context_length(data, model)
+        # we compute token counts based on the model's tokenizer
+        data = compute_context_lengths(data, model)
 
     results_dir = "results"
     do_cache = True
-    safemodelname = model.split("/")[-1]# +"-labels"
+    safemodelname = model.split("/")[-1]  # +"-labels"
 
     if labels:
         safemodelname += "-labels"
-        split_to_use="context_window_text_with_labels"
-    
+        split_to_use = "context_window_text_with_labels"
+
     if reasoning_level != "":
         safemodelname += f"-{reasoning_level}"
-        api_args['reasoning_effort'] = reasoning_level
-        api_args['extra_body'] = { 
-            "allowed_openai_params": ["reasoning_effort"]
-        }
+        api_args["reasoning_effort"] = reasoning_level
+        api_args["extra_body"] = {"allowed_openai_params": ["reasoning_effort"]}
 
     Path(f"{results_dir}/{dataset}/{safemodelname}").mkdir(parents=True, exist_ok=True)
 
     # sort by context window ID (to enable caching)
     data = data.sort("context_window_id")
 
-
     # for each example:
     output_counter = 0
     correct = 0
-
+    total_count = 0
 
     all_outputs = []
     current_outputs = []
 
-
-    data = data.filter(lambda x: x['context_len'] <= max_context_len) 
-    data = data.filter(lambda x: x['context_len'] > min_context_len) 
-    print(f"Evaluating {len(data)} examples for model {model} with context lengths between {min_context_len} and {max_context_len}...")
+    data = data.filter(lambda x: x["context_len"] <= max_context_len)
+    data = data.filter(lambda x: x["context_len"] > min_context_len)
+    print(
+        f"Evaluating {len(data)} examples for model {model} with context lengths between {min_context_len} and {max_context_len}..."
+    )
 
     # potentially init from prior partial run
     full_results_path = f"{results_dir}/{dataset}/{safemodelname}/full_output.jsonl"
@@ -99,25 +103,28 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
         ids_to_skip = []
         correct = 0
         output_counter = 0
-        with jsonlines.open(full_results_path, 'r') as f:
+        with jsonlines.open(full_results_path, "r") as f:
             for obj in f:
-                ids_to_skip.append(obj['id'])
-                correct += obj['score']
+                ids_to_skip.append(obj["id"])
+                correct += obj["score"]
                 output_counter += 1
-        data = data.filter(lambda x: x['id'] not in ids_to_skip)
-        print(f"Caution: filtered out completed examples; {len(data)} examples left to run...")
+                total_count += 1
+        data = data.filter(lambda x: x["id"] not in ids_to_skip)
+        print(
+            f"Caution: filtered out completed examples; {len(data)} examples left to run..."
+        )
     else:
-        with jsonlines.open(full_results_path, 'w') as f:
-            pass # init file
+        with jsonlines.open(full_results_path, "w") as f:
+            pass  # init file
 
     try:
         print("starting data")
         if batch_by_context_window:
-            context_windows = list(set(data['context_window_id']))
+            context_windows = list(set(data["context_window_id"]))
             for context_window_id in context_windows:
-                this_windowset_data = data.filter(lambda x: x['context_window_id'] == context_window_id)
-                this_window_data = this_windowset_data
-                score = 0
+                this_window_data = data.filter(
+                    lambda x: x["context_window_id"] == context_window_id
+                )
 
                 if do_cache:
                     # run one through, then run the remainder as a batch
@@ -131,7 +138,7 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
                         model=f"{model_prefix}{model}",
                         api_version="2024-12-01",
                         extra_headers={"anthropic-beta": "context-1m-2025-08-07"},
-                        messages = [
+                        messages=[
                             {
                                 "role": "system",
                                 "content": [
@@ -144,7 +151,7 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
                                         "text": f"{seed_datapoint[split_to_use]}",
                                         "cache_control": {"type": "ephemeral"},
                                     },
-                                ]
+                                ],
                             },
                             {
                                 "role": "user",
@@ -153,62 +160,75 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
                         ],
                         **api_args,
                     )
-                    output = client["choices"][0]["message"]["content"]
 
-                    this_output = interpret_litellm_output(datapoint, model, client[count], process_response)
+                    this_output = interpret_litellm_output(
+                        datapoint, model, client, process_response
+                    )
 
                     all_outputs.append(this_output)
                     current_outputs.append(this_output)
-                
-                    correct += this_output['score']
+
+                    correct += this_output["score"]
                     output_counter += 1
-                
-                    
+
                     # now batch the rest
-                    # convert the dictionary of lists to a list of dictionaries 
+                    # convert the dictionary of lists to a list of dictionaries
                     # fancy pythonic way to do this: https://stackoverflow.com/questions/5558418/list-of-dicts-to-from-dict-of-lists
-                    remaining_window_examples = [dict(zip(this_window_data[1:],t)) for t in zip(*this_window_data[1:].values())]
-                    print(f"Cache call done. Running {len(remaining_window_examples)} more examples as a single batch...")
-                
+                    remaining_window_examples = [
+                        dict(zip(this_window_data[1:], t))
+                        for t in zip(*this_window_data[1:].values())
+                    ]
+                    print(
+                        f"Cache call done. Running {len(remaining_window_examples)} more examples as a single batch..."
+                    )
+
                 else:
                     # all examples are remaining
-                    remaining_window_examples = [dict(zip(this_window_data[0:],t)) for t in zip(*this_window_data[1:].values())]
-                    print(f"Running window with {len(remaining_window_examples)} examples...")
+                    remaining_window_examples = [
+                        dict(zip(this_window_data[0:], t))
+                        for t in zip(*this_window_data[1:].values())
+                    ]
+                    print(
+                        f"Running window with {len(remaining_window_examples)} examples..."
+                    )
 
                 client = litellm.batch_completion(
                     api_key=os.environ.get("LITELLM_API_KEY"),
                     base_url=base_url,
                     model=f"{model_prefix}{model}",
                     extra_headers={"anthropic-beta": "context-1m-2025-08-07"},
-                    #max_completion_tokens=32768,
+                    # max_completion_tokens=32768,
                     tools=[],
-                    messages = [
-                        [{
-                            "role": "system",
-                            "content": [
-                                {
-                                    "type": "text",
-                                    "text": "You are a helpful assistant.",
-                                },
-                                {
-                                    "type": "text",
-                                    "text": f"{datapoint[split_to_use]}",
-                                    #"cache_control": {"type": "ephemeral"},
-                                },
-                            ]
-                        },
-                        {
-                            "role": "user",
-                            "content": f"{datapoint['question']}",
-                        },
-                        ] for datapoint in remaining_window_examples
+                    messages=[
+                        [
+                            {
+                                "role": "system",
+                                "content": [
+                                    {
+                                        "type": "text",
+                                        "text": "You are a helpful assistant.",
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": f"{datapoint[split_to_use]}",
+                                        # "cache_control": {"type": "ephemeral"},
+                                    },
+                                ],
+                            },
+                            {
+                                "role": "user",
+                                "content": f"{datapoint['question']}",
+                            },
+                        ]
+                        for datapoint in remaining_window_examples
                     ],
                     **api_args,
-
                 )
                 for count, datapoint in enumerate(remaining_window_examples):
-                    this_output = interpret_litellm_output(datapoint, model, client[count], process_response)
-                    correct += this_output['score']
+                    this_output = interpret_litellm_output(
+                        datapoint, model, client[count], process_response
+                    )
+                    correct += this_output["score"]
                     output_counter += 1
                     all_outputs.append(this_output)
                     current_outputs.append(this_output)
@@ -226,7 +246,9 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
                 ) as f:
                     for line in current_outputs:
                         f.write(line)
-                    print(f"score so far: {correct}/{output_counter}")
+                    print(
+                        f"score so far: {correct / output_counter:.4f} ({output_counter} examples)"
+                    )
                 current_outputs = []
         else:
             for batch in batched(data, batch_size):
@@ -236,33 +258,36 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
                     extra_headers={"anthropic-beta": "context-1m-2025-08-07"},
                     model=f"{model_prefix}{model}",
                     tools=[],
-                    messages = [
-                        [{
-                            "role": "system",
-                            "content": [
-                                {
-                                    "type": "text",
-                                    "text": "You are a helpful assistant.",
-                                },
-                                {
-                                    "type": "text",
-                                    "text": f"{datapoint[split_to_use]}",
-                                    "cache_control": {"type": "ephemeral"},
-                                },
-                            ]
-                        },
-                        {
-                            "role": "user",
-                            "content": f"{datapoint['question']}",
-                        },
-                        ] for datapoint in batch
+                    messages=[
+                        [
+                            {
+                                "role": "system",
+                                "content": [
+                                    {
+                                        "type": "text",
+                                        "text": "You are a helpful assistant.",
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": f"{datapoint[split_to_use]}",
+                                        "cache_control": {"type": "ephemeral"},
+                                    },
+                                ],
+                            },
+                            {
+                                "role": "user",
+                                "content": f"{datapoint['question']}",
+                            },
+                        ]
+                        for datapoint in batch
                     ],
                     **api_args,
-
                 )
                 for count, datapoint in enumerate(batch):
-                    this_output = interpret_litellm_output(datapoint, model, client[count], process_response)
-                    correct += this_output['score']
+                    this_output = interpret_litellm_output(
+                        datapoint, model, client[count], process_response
+                    )
+                    correct += this_output["score"]
                     output_counter += 1
                     all_outputs.append(this_output)
                     current_outputs.append(this_output)
@@ -279,12 +304,15 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
                 ) as f:
                     for line in current_outputs:
                         f.write(line)
-                    print(f"score so far: {correct}/{output_counter}")
+                    print(
+                        f"score so far: {correct / output_counter:.4f} ({output_counter} examples)"
+                    )
                 current_outputs = []
 
-
     except Exception as e:
-        error_file_loc = f"{results_dir}/{dataset}/{safemodelname}/error_partial_results.jsonl"
+        error_file_loc = (
+            f"{results_dir}/{dataset}/{safemodelname}/error_partial_results.jsonl"
+        )
         with jsonlines.open(error_file_loc, "w") as f:
             for line in all_outputs:
                 f.write(line)
@@ -294,93 +322,96 @@ def launch(model, dataset, reasoning_level, labels, batch_by_context_window, bat
             f"Error on datapoint {datapoint['id']}, which is item {output_counter}. Saved partial results to {error_file_loc}. Error: {e}"
         )
 
-
-    with jsonlines.open(f"{results_dir}/{dataset}/{safemodelname}/full_output.jsonl", "a") as f:
+    with jsonlines.open(
+        f"{results_dir}/{dataset}/{safemodelname}/full_output.jsonl", "a"
+    ) as f:
         for line in current_outputs:
             f.write(line)
 
+    total_count += len(data)
     with open(f"{results_dir}/{dataset}/{safemodelname}/overall.txt", "w") as f:
-        summary = f"Overall score for {model} on {len(data)} examples: {correct}/{len(data)} = {correct / len(data)}"
-        print(summary)
+        summary = f"Overall score for {model} on {total_count} examples: {correct}/{total_count} = {correct / total_count}"
         f.write(summary)
+        print(summary)
 
 
 if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser()
-    
 
     parser.add_argument(
-        '--dataset', 
-        default='synth', 
-        choices=['synth', 'real'],
-        help='Dataset to use (default: synth)'
+        "--dataset",
+        default="synth",
+        choices=["synth", "real"],
+        help="Dataset to use (default: synth)",
     )
 
     parser.add_argument(
-        '--reasoning_level', 
-        default='', 
-        choices=['', 'low', 'medium', 'high', 'minimal'],
-        help='Reasoning level (default: empty string)'
+        "--reasoning_level",
+        default="",
+        choices=["", "low", "medium", "high", "minimal"],
+        help="Reasoning level (default: empty string)",
     )
-    
+
     parser.add_argument(
-        '--labels', 
-        action='store_true',
+        "--labels",
+        action="store_true",
         default=False,
-        help='Enable labels (default: False)'
+        help="Enable labels (default: False)",
     )
 
     parser.add_argument(
-        '--batch_by_context_window', 
-        action='store_true',
+        "--batch_by_context_window",
+        action="store_true",
         default=False,
-        help='Enable batching by context window (default: False)'
+        help="Enable batching by context window (default: False)",
     )
 
     parser.add_argument(
-        '--batch_size', 
-        default=1,
-        type=int,
-        help='number of examples to run at once'
+        "--batch_size", default=1, type=int, help="number of examples to run at once"
     )
-    
+
     parser.add_argument(
-        '--max_context_len', 
+        "--max_context_len",
         default=131072,
         type=int,
-        help='max context length to include'
+        help="max context length to include",
     )
 
-
     parser.add_argument(
-        '--min_context_len', 
+        "--min_context_len",
         default=1024,
         type=int,
-        help='min context length to include'
+        help="min context length to include",
     )
 
-
     parser.add_argument(
-        '--model_prefix', 
+        "--model_prefix",
         default="",
         type=str,
-        help="a prefix to append to all models (e.g. 'litellm_proxy/')"
+        help="a prefix to append to all models (e.g. 'litellm_proxy/')",
     )
     parser.add_argument(
-        '--base_url', 
+        "--base_url",
         default=None,
         type=str,
-        help="a base URL for a hosted litellm instance, if necessary"
+        help="a base URL for a hosted litellm instance, if necessary",
     )
 
-    parser.add_argument(
-        '--model', 
-        required=True,
-        help='Model name (required)'
-    )
-    
+    parser.add_argument("--model", required=True, help="Model name (required)")
+
     args = parser.parse_args()
 
-    launch(args.model, args.dataset, args.reasoning_level, args.labels, args.batch_by_context_window, args.batch_size, args.max_context_len, args.min_context_len, args.model_prefix, args.base_url)
+    launch(
+        args.model,
+        args.dataset,
+        args.reasoning_level,
+        args.labels,
+        args.batch_by_context_window,
+        args.batch_size,
+        args.max_context_len,
+        args.min_context_len,
+        args.model_prefix,
+        args.base_url,
+    )
