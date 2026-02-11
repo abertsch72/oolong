@@ -26,9 +26,9 @@ You can set maximum and minimum input example lengths; Oolong-real will also att
 Release status:
 - [x] Output scoring scripts for both splits
 - [x] API inference script
-- [ ] Oolong-synth construction code
-- [ ] Validated splits of each Oolong-synth source dataset 
-- [ ] Oolong-real construction code
+- [x] Oolong-synth construction code
+- [x] Validated splits of each Oolong-synth source dataset 
+- [X] Oolong-real construction code
 - [ ] Full output sets for models from the paper
 - [ ] Analysis scripts
 
