@@ -1,0 +1,533 @@
+{"input": "The woman burst in a warm laughter <-->  The woman started laughing in a nice and pleasant way", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The President brushed aside the accusations <-->  The President gave little credit to the accusations", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "I asked for your help and you disappeared from radar <-->  I asked you for help and you were reparing a radar", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The employee swallows her anger <-->  The employee speaks her anger", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He shot down all my arguments <-->  He approved my arguments", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Hillary brushed aside the accusations <--> Hillary cleaned the space by sweeping the accusations.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The show was characterised by dark humor and satire <-->  The show was known to joke about matters considered taboo and for its use of satire", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "I have to kill the program <-->  I have to terminate the program", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Rahul drank his glass. <--> Rahul drank his beverage.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "we laid in fields of gold <-->  we laid in fields of roses", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Draupadi's eyes were diamonds. <--> Draupadi's eyes were beautiful.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The faculty meeting was an easy breeze <--> The faculty meeting was very easy and relaxing ", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He was worried they might spill everything about him <-->  He was worried they might spill water on him", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "The children were roses beautiful and forlorn <-->  The children appeared beautiful and fragile", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "The house was a tomb. <-->  The house was big.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I had already planted the idea in her mind. <-->  I had already scared her about the idea.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "How can we build a \u2019Global economy\u2019 if finance is handcuffed? <--> How can we build a \u2019Global economy\u2019 if finance is tied with handcuffs?", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "It is sad to observe the fruits of ignorance. <-->  It is sad to observe the effects of ignorance.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Nobody cares about the roots of modern civilization. <-->  He was known as a colourful dog.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She knew she was burning in shame <--> She knew she was feeling calm ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Ramesh's parents felt that he was a bright boy. <--> Ramesh's parents felt that he was a luminous boy.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Alex leaked the process. <--> Alex disclosed the process.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Words are weapons <--> Weapons are words ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He was so happy he felt his heart was exploding <-->  he was overwhelmed by happiness", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "David\u2019s eyes were like daggers at Paul when Paul invited his new girlfriend to dance. <-->  David looked at Paul in a sad way when Paul invited his new girlfriend to dance.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "my soul was a lampless sea and she was the tempest <-->  my soul was in despair and she was the cause", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "The wind howled; the waves dashed their bucklers together - we were in the jaws of death <-->  The wind roared; the waves collided - we were in great danger.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He felt a sudden red pain through his leg <-->  He felt a sudden intense pleasure through his leg", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "\u2019Life' wrote a friend of mine, 'is a public performance on the violin, in which you must learn the instrument as you go along.\u201d <--> We need to continuously keep on learning in our lifetime.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He looked neither one way nor the other way but sat like a carved image. <-->  He looked neither one way nor the other way but sat completely still.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "There were dark corners in his past things he didn't like to remember. <-->  There were negative elements in his past things he didn't like to remember.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He lived in a state of deep terror <-->  He lived in a state of mild discomfort", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The boss will eat me alive if the report arrives late. <-->  The boss is a cannibal and I am in danger.", "label": "incorrect", "model_output": "REQUEST_ERROR: litellm.BadRequestError: Error code: 400 - {'error': {'message': \"litellm.BadRequestError: litellm.ContentPolicyViolationError: litellm.ContentPolicyViolationError: AzureException - The response was filtered due to the prompt triggering Azure OpenAI's content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766\\nmodel=azure/gpt-4.1-nano. content_policy_fallback=None. fallbacks=None.\\n\\nSet 'content_policy_fallback' - https://docs.litellm.ai/docs/routing#fallbacks. Received Model Group=azure/gpt-4.1-nano\\nAvailable Model Group Fallbacks=None\", 'type': None, 'param': None, 'code': '400'}}", "best_guess_score": 0}
+{"input": "Alex leaked the process. <--> Alex dripped the process.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He is grinning like an ape. <-->  He is smiling in a charming way.", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "The roots of the war were in the economical crisis <-->  The effect of the war was the economical crisis", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I've reached my boiling point. <-->  I enjoy this situation to a certain extent.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a comedy show <-->  The faculty meeting was embarassing", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The rich man had a cold heart <-->  The rich man was generous and caring", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Success is a bastard as it has many fathers; failure is an orphan with no takers. <-->  Success is a kind of dog and failure is a child.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Each blade of grass was a bayonet pointed firmly at our bare feet <-->  We could painfully feel each blade of grass on our bare feet", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "then a colorful joy exploded in her chest <-->  then her chest exploded due to excessive joy", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The war devoured so many lives. <-->  So many people were killed in the war.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The pen is mightier than the sword. <--> The press is mightier than military might.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The computer in the classroom was a dinosaur <-->  In the class there was a computer that was incredibly old and big", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "You'd better keep away from Bill today because he's in a black mood. <-->  You'd better keep away from Bill today because he's in a black car.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a comedy show <-->  At the faculty meeting we watched a comedy show", "label": "incorrect", "model_output": "Incorrect", "best_guess_score": 1}
+{"input": "He knew how to write sweet words <-->  He knew how to write Japanese words", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Their honey moon was a dream <-->  Their honey moon was a strange experience", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The new city was a maze for him. <-->  He had a hard time finding his way through the new city.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Mark \u2019s comments are an acid bath for my nerves. <-->  Mark \u2019s comments are interesting.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The promise between us was a flower <-->  The promise between us was beautiful and fragile", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "He was worried they might spill everything about him <-->  He was worried they might give information about his wife", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "the crowd was a roaring river <-->  the crowd was small and silent", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The war devoured so many lives. <-->  The war scared so many people.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "When I looked at my friend after the storm he was a ghost. <-->  When I looked at my friend after the storm he was pale and scared.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He always had an interest for the fruit of knowledge <-->  He always had an interest for the benefits of knowledge", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The girl could still remember that sweet song <-->  that was a nice and fine song the girl could still remember", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He attacked every weak point in my argument <-->  He helped me improve my argument\u2019s weak points", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Life is a foreign language: all men mispronounce it.\u201d <--> Life is not easily understood.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The roots of progress are in technological development. <-->  Technological development is the consequence of progress.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Rohan bought a Picasso. <--> Rohan bought a painting by Picasso.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The girl could still remember that sweet song <-->  the girl could still remember that song about sugar", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Calm down - there's no need to get all steamed up about it. <-->  Calm down - there's no need to steam this up.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "the flowers danced in the wind <-->  the flowers moved in all directions under the wind", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "O Moon your light is failing and now you are just a cold bow <-->  Moon  your light is stronger now and I have a bow", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I embarked on life thirty years ago <-->  My life started thirty years ago", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The darted harpoon was lightning in the sea. <-->  The darted harpoon was slow and grey in the sea", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She arrived at the grocery store with an army of children <-->  She arrived at the grocery store with very young children", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "The old woman had an open heart <-->  The old woman was introvert", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a war <-->  The faculty meeting was highly aggressive", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "After three martinis, Abhinav was feeling unwell. <--> After drinking three martinis, Abhinav was feeling unwell.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He attacked every weak point in my argument <-->  He ignored all the weak points in my argument", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "His friend was very tall and he looked like a chess piece beside him. <-->  His friend was very tall and he looked small beside him.", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "David is a worm for what he did to Shelia <-->  David is a hero for what he did to Shelia", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Bill attacked every weak point in Rob's argument. <--> Bill assaulted every weak point in Rob's argument.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "her smile was a blinding sun <-->  her smile was wonderful and fulfilling to see", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "The computer in the classroom was a dinosaur <-->  The computer in the classroom was very old", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "my soul was a lampless sea and she was the tempest <-->  in a lampless sea a tempest is dangerous", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Then they cried a sea of tears <-->  then they sailed to sea", "label": "incorrect", "model_output": "Incorrect", "best_guess_score": 1}
+{"input": "A golden sun shines high in the sky <-->  a black sun shines high in the sky", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The old tenant gave a bittersweet speech <-->  The old tenant gave a sad speech", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I never won an argument with him <-->  I never managed to prevail in an argument with him", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "By that time my friend was broken so he had to sell his house <-->  By that time my friend had no money so he had to sell his house", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "I think we should think about the roots of the problem <--> I think we should think about the origins of the problem ", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "You were hanging yourself on someone else 's words <-->  You were happy with what someone else had said", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "she cut him down with her words <-->  she put him down with her words", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The soldiers were devils. <-->  The soldiers appeared dangerous and menacing.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "It always rained in my life  he said <-->  I was always happy in my life  he said", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "David\u2019s eyes were like daggers at Paul when Paul invited his new girlfriend to dance. <-->  David\u2019s eyes resembled the shape of daggers when Paul invited his new girlfriend to dance.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "After letting off his rage he sat down like a lamb. <-->  After letting off his rage he ran away.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "His friend was very tall and he looked like a chess piece beside him. <-->  His friend was very tall and he looked short beside him.", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "The wind howled; the waves dashed their bucklers together - we were in the jaws of death <-->  The wind roared; the waves collided - we were in the jaws of a fish.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The new band was absolutely on fire <-->  the new band started a fire for no reason", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Life is a foreign language: all men mispronounce it.\u201d <--> Life is French or some other language.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He was so happy he felt his heart was exploding <-->  he was so happy he felt he should explode something", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "William loved cigarettes. <--> William loved the shape of cigarettes.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "People think the old man has a sour temper <-->  people think the old man has an unsociable and aggressive temper", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Ahab was a pyramid but I kept kicking at him. <-->  Ahab was a tomb and I kept hitting him.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He is grinning like an ape. <-->  He is crying.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She was sure she was living this fantasy romance and kept deluding herself <-->  she was sure she was reading a fantasy romance and kept deluding herself", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "In Bombay, people change dance partners frequently, but not the dance. <--> In Bombay, people work with one another opportunistically.", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "You were hanging yourself on someone else 's words <-->  You did not care about what someone else said", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "David\u2019s eyes were like daggers at Paul when Paul invited his new girlfriend to dance. <-->  David looked at Paul very angrily when Paul invited his new girlfriend to dance.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The work would have been easier if I had an extra pair of hands. <--> The work would have been easier if I had another worker.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Duryodhan's life had a superb cast, but he couldn't figure out the plot. <--> Duryodhan was confused all his life.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Their honey moon was a dream <-->  Their honey moon was very pleasant", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "I have to kill the program <-->  I have to start the program", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Her joy was blinding <-->  Her joy was strong and intense", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The sky was on fire and he felt pain pouring down. <-->  The sky was white and he felt a light hint of pain.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He lived in a state of deep terror <-->  He lived in a state of subtle fear", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The new band was absolutely on fire <-->  the new band was doing absolutely great", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The new city was a maze for him. <-->  The new city was hard to navigate for him.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The republican convention was a horror show <-->  during the republican convention people talked about a horror show", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "As for Peleg he took it more like a philosopher. <-->  As for Peleg he responded in a thoughtful way.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The show was characterised by dark humor and satire <-->  The show was characterised by low level gags", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The future looks very promising <-->  the future is a cloudless sky", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "He was in a black mood. <-->  He was happy and jolly", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She was ready to turn her hand and heart to anything that promised to yield safety. <-->  She was ready to act and to do anything that seemed to yield safety.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "As for Peleg he took it more like a philosopher. <-->  As for Peleg himself he responded angrily.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "David is a worm for what he did to Shelia <-->  David lives underground for what he did to Shelia", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He felt a sudden red pain through his leg <-->  He felt a slow uncomfortable feeling creeping up his leg", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "All the following sentences have nothing to do with this sentence <-->  He thinks these documents will become known soon or late", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "It always rained in my life  he said <-->  I was very unlucky in my life  he said", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "The faculty meeting was a circus <-->  At the faculty meeting we watched a comedy show", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Adam did not understand the root of the crisis <-->  Adam did not understand the solution to the crisis", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "And now they were leaking all kinds of documents <-->  And now they were disclosing all kinds of documents", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "I was staring straight into the shining sun <-->  I was considering my future career", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I demolished his argument <-->  I liked and supported his arguments", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She was the light of my life. <-->  She was the life of my light.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The seeds of change were planted in 1943 <-->  1943 was the very beginning of a change", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She was ready to turn her hand and heart to anything that promised to yield safety. <-->  She was ready to fear anything that promised to yield safety.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She said he was very sweet and he smiled <-->  She said he was creepy and he smiled", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a real war <-->  The faculty meeting was highly aggressive", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": " I am the good shepherd \u2026 and I lay down my life for the sheep. <--> My profession is being a nice shepherd and I lay down my life for the farm animals.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "If you are drowning in a sea of minor problems you cannot focus on what matters <-->  If you have very little problems you cannot focus on what matters", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The news inflamed your temper. <-->  The news was on fire and in flames.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Fear had changed him to a shaken jelly. <-->  Fear made him shudder all over.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "It always rained in my life  he said <-->  I was always a true optimist  he said", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "the flowers danced in the wind <-->  the flowers moved in the wind", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The great gold apples of light hang from the street\u2019s long bough dripping their light on the faces that drift below <-->  beyond the river that drifts and blows you will find the great gold apples of light", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Your words surround me but I will not surrender <-->  You speak in a charming and effective way but I am not convinced", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "After working two years for the company she was burned out <-->  After working two years for the company she was into rock and roll", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "This is a trap sentence <-->  If you give a high score to this sentence you don\u2019t get paid", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "In the worst of times we looked at hope  shining in the dark <-->  In the worst of times we still had hope", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The faculty meeting was a circus <-->  The faculty meeting was ridiculous", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "the wheels of justice turn slowly <-->  justice prevails in very little time", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "We still ignore how the seed of life was planted on our planet <-->  We still ignore how life was started on our planet", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "an ancient anger exploded in his heart <-->  his ancient anger disappeared and he was happy", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "All the following sentences have nothing to do with this sentence <-->  He thinks these documents will be disclosed soon or late", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Her eyes were fireflies <--> Her eyes were flying away ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Faith feeds among the tombs and even from these dead doubts she gathers her most vital hope. <-->  Faith comes from the tombs and feeds the doubts.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The war devoured so many lives. <-->  The war killed so many people.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The animal in the middle of the sea was a mountain. <-->  The animal in the middle of the sea was large.", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "The news inflamed your temper. <-->  The news made you very angry.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Jonathan drowned in a sea of grief. <-->  Jonathan was extremely sad.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Calm down - there's no need to get all steamed up about it. <-->  Calm down - there's no need to get enthusiastic about it.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "People think the old man has a sour temper <-->  people think the old man has a outgoing temper", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The pen is mightier than the sword. <--> The pen is larger in size than the sword.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She was the light of my life. <-->  She brought depression and dissatisfaction into my life.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He was living in his dream world  shutting his eyes in front of reality <-->  He was living on his own and when he slept he used to dream", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You will love the new train  it is a heavenly ride <-->  You will love the new train  it goes through Heaven", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The guy was a floating whale in the small swimming pool. <-->  The guy was eating whale meat in the small swimming pool.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He is the apple of my eye. <-->  I hate him.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The Leviathan in the ocean is a moving country. <-->  The Leviathan in the ocean is small.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Josh played Bach. <--> Josh played with Bach.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The iron in the tail of the animal was a restless needle. <-->  The iron in the tail of the animal was strange.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He is the apple of my eye. <-->  He has an apple and an eye.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The wind howled; the waves dashed their bucklers together - we were in the jaws of death <-->  The wind roared; the waves collided - we were risking our lives.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The great gold apples of light hang from the street\u2019s long bough dripping their light on the faces that drift below <-->  the sun and the moon hang along the streets and blind people", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Now you can fade off to sleep. <-->  Now you can go to sleep.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "After working two years for the company she was burned out <-->  After working two years for the company she was full of energy", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The weeks crawled by until we could meet again <--> the weeks seemed to pass fast until we could meet again ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The darted harpoon was lightning in the sea. <-->  The harpoon was darted in the sea.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I think we should think about the roots of the problem <--> I think we should think about the consequences of the problem ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The chicken pasta is waiting for his check. <--> The customer who ate the chicken pasta is waiting for his check.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She said he was very sweet and he smiled <-->  She said he was covered in sugar and he smiled", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Silence was crushing . I knew the moment had arrived <--> Silence was short : I knew the moment had arrived ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a breeze <--> The faculty meeting was very easy and relaxing ", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "I've reached my boiling point. <-->  I cannot stand this situation anymore.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "I embarked on life thirty years ago <-->  I embarked on a ship thirty years ago", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "It is sad to observe the fruits of ignorance. <-->  It is sad to observe the origins of ignorance.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She had a heart of stone. <-->  She was cruel.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The roots of the war were in the economical crisis <-->  The real causes of the war were in the economical crisis", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "They were burning with desire <-->  They were uninterested", "label": "incorrect", "model_output": "Incorrect", "best_guess_score": 1}
+{"input": "the flowers danced in the wind <-->  the flowers moved rhythmically to music in the wind", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He felt a dark sexual desire <-->  He felt a clear sexual desire", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The show was characterised by dark humor and satire <-->  The show was characterised by light humor and satire", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She is fishing in troubled waters. <-->  She is looking for something that is easy to obtain.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "he was feeling down hurt and sad <-->  he had a broken hand", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "They were burning with desire <-->  They desired to burn a house", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He kept us in the dark about his plans <--> He communicated all his plans to us ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The woman had a blue feeling <-->  The woman had a yellow feeling", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He felt a wave of excitement <-->  he felt an intense excitement overcoming him", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Nobody cares about the roots of modern civilization. <-->  Nobody cares about the consequences of modern civilization.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You were hanging yourself on someone else 's words <-->  You were oblivious of what someone else had said", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "She said he was very sweet and he smiled <-->  She said he was very nice and he smiled", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The darted harpoon was lightning in the sea. <-->  The darted harpoon was quick and shiny in the sea.", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "Time flies <-->  time passes very fast", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "By that time my friend was broken so he had to sell his house <-->  By that time my friend was wealthy and he had to sell his house", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Faith feeds among the tombs and even from these dead doubts she gathers her most vital hope. <-->  Faith is something strange and hard to understand.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "My lawyer is a shark <-->  My lawyer is kind and romantic", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He said the leaders will have to deal with an ocean of resentment <-->  He said the leaders will have to deal with a large amount of resentment", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "His friend was very tall and he looked like a chess piece beside him. <-->  His friend was very tall and he looked fat beside him.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She had a bright idea <-->  She had a good idea", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Jane knew these dicsussions were the seeds of a potential conflict <--> Jane was trying to start a conflict ", "label": "incorrect", "model_output": "Incorrect", "best_guess_score": 1}
+{"input": "I asked for your help and you disappeared from radar <-->  I asked for your help and you kindly helped me", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The rich man had a cold heart <-->  The rich man was impulsive and mad", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He hated the stench of failure. <-->  He hated to see or experience failure.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "the wheels of justice turn slowly <-->  it might take time but eventually justice prevails", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Marcus enjoyed the book. <--> Marcus enjoyed buying the book.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He was in a black mood. <-->  He was in a black suit", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She was lost in her thoughts and memories <-->  She was attentive and present to the conversation", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He thinks these documents will leak out soon or late <--> He thinks these documents will be disclosed soon or late ", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The Leviathan in the ocean is a moving country. <-->  The Leviathan in the ocean is large.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "When it rains in Tokyo the city becomes a sea of umbrellas. <-->  Tokyo is filled with umbrellas when it rains.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Now you can fade off to sleep. <-->  Now you can wake up.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You were the golden boy back then <-->  you were the dangerous boy back then", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Our whole life we swim against the waves towards the green light of happiness. <-->  Our whole life we try to reach happiness even if it is difficult.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The guy was a floating whale in the small swimming pool. <-->  The guy looked fat and large while floating in the small swimming pool.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "You have to head straight into your fears to win them <--> you have to deal with the very things that scare you to overcome your fears ", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "We still ignore how the seed of life was planted on our planet <-->  We still ignore how water was formed on our planet", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The woman had a blue feeling <-->  What the woman was feeling was a kind of melancholy", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Julia was an overbearing pizza with condescending toppings, and frankly, I was on a diet. <--> Julia was a large sized pizza with toppings but I was unable to eat it.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You will love the new train  it is a heavenly ride <-->  You will love the new train  it offers a ride you can really enjoy", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "My friend said the project was a nightmare <-->  my friend told me the project was relaxing", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I was staring straight into the shining sun <-->  I was trying to study", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "How can we build a knowledge economy if research is handcuffed? (Barque and Chaumartin 2009) <-->  How can we build a knowledge economy if research is blocked?", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The employee swallows her anger <-->  The employee swallows her water without a sign of anger", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The moment had arrived for killing the past and coming back to life <-->  it was the moment to forget everything had happened and focus on one's life again", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "Ask table 12 whether he wants water. <--> Ask the furniture of table 12 whether it wants water.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "the crowd was a roaring river <-->  the crowd was liquid like a river", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "After working two years for the company she was burned out <-->  After working two years for the company she was exhausted  stressed and depleted", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The old woman had an open heart <-->  The old woman was greedy", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The soldiers were devils. <-->  The soldiers were excited and lively.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "A break up can leave you with a broken heart. <-->  A break up can make you feel like you are having a stroke.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He felt a dark sexual desire <-->  He felt an obscure and disquieting sexual desire", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The crocodile's teeth are yellow daggers. <--> The crocodile has yellow and pointed teeth.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The faculty meeting was a war <-->  At the faculty meeting we talked about war", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "When I met the boss he seemed bitter about the whole story <--> When I met the boss he seemed sad about the whole story ", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "War was a nightmare. <-->  War was a terrible thing.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He felt a sudden red pain through his leg <-->  He felt running through his leg a sudden pain and saw red", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "Adam did not understand the root of the crisis <-->  the reasons of the crisis were not understood by Adam", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He felt a wave of anger <-->  he felt a mild discouragement", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You disagree ? Ok  shoot <-->  You disagree ? Ok  tell why", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Alexander's spirits rose. <--> Alexander was happy.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "His purplish head was a skull under the moon. <-->  His purplish head was black and hairy under the moon.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "See the sun  far off  a shriveled orange in a sky gone black <-->  see the sun  far off  it looks large and white in a sky gone black", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The old woman had an open heart <-->  The old woman was nice and generous", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Your words surround me but I will not surrender <-->  You speak profusely and in convincing ways but I do not listen to you", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "You have to head straight into your fears to win them <--> you have to face your friends to win them ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The Leviathan in the ocean is a moving country. <-->  The Leviathan in the ocean is huge.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The moment had arrived for killing the past and coming back to life <-->  the moment had arrived to think about what had happened and remember", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She was just a trophy to Ricardo <-->  Ricardo loved her truly", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You were dying to believe in what you heard <-->  You thought what you heard was funny", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He was living in his dream world  shutting his eyes in front of reality <-->  He did not want to acknowledge reality and kept denying it", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "We dug up some interesting facts <-->  We retrieved some interesting facts", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He was in a black mood. <-->  He was irritable and angry.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He knew how to write sweet words <-->  He knew how to write down something nice and pleasant", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "In the worst of times we looked at hope  shining in the dark <-->  In the worst of times we lost all hopes", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "After letting off his rage he sat down like a lamb. <-->  After letting off his rage he sat down in a nervous way.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "If you are drowning in a sea of minor problems you cannot focus on what matters <-->  If you drown in the sea  then you have a problem", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "The iron in the tail of the animal was a restless needle. <-->  The iron in the tail of the animal was thick and large.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "A golden sun shines high in the sky <-->  a very bright sun shines high in the sky", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "This is a trap sentence <-->  This is not even semantically related", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He had a full bag of memories to unload. <-->  He had very few memories to tell.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The roots of the war were in the economical crisis <-->  The economical crisis was the cause of the war", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "When I met the boss he seemed bitter about the whole story <--> When I met the boss he seemed happy about the whole story ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The seeds of change were planted in 1943 <-->  The change started back in 1943", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The faculty meeting was a tragedy <-->  the faculty meeting was very bad", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Andrew's emails were beating a dead horse. <--> Andrew's emails resulted in a dead horse being beaten.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "This is a trap sentence <-->  If you score this high I am sad", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The Leviathan in the ocean is a moving country. <-->  The Leviathan in the ocean is green.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He attacked every weak point in my argument <-->  He pointed out every weak point in my argument", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Duryodhan was the black sheep of the Kuru dynasty. <--> Duryodhan was a disgrace to the Kuru dynasty.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "my love is a summer day <-->  my love is a day during the summer months", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "He attacked every weak point in my argument <-->  He was able to find and show every weak point in my argument", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Katie\u2019s plan to get into college was a house of cards on a crooked table <-->  Katie\u2019s college was a house of cards on a crooked table", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a breeze <--> At the faculty meeting we talked about the breeze ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I had already planted the idea in her mind. <-->  I had already planted the seed when an idea crossed my mind", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "With the crisis the bubble exploded. <-->  With the crisi  the situation changed dramatically.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "she cut him down with her words <-->  she cheered him up with her words", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a circus <-->  The faculty meeting was very interesting", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He is the apple of my eye. <-->  I love him.", "label": "correct", "model_output": "Correct", "best_guess_score": 1}
+{"input": "She was just a trophy to Ricardo <-->  She was just a sign of accomplishment to Ricardo", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Calm down - there's no need to get all steamed up about it. <-->  Calm down - there's no need to get angry about it.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She had a heart of stone. <-->  She was cold and indifferent.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Her pen was a knife <--> What she wrote was boring ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": " I am the good shepherd \u2026 and I lay down my life for the sheep. <--> I am a nice person and I sacrifice for others.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "War was a nightmare. <-->  War felt good.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I never won an argument with him <-->  I never had an argument with him", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She was lost in her thoughts and memories <-->  She payed little attentions to her memories and thoughts", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She was the light of my life. <-->  She brought happiness and joy into my life.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "War was a nightmare. <-->  I had a dream.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Words are weapons <--> Words are linguistic abstractions ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Success is a bastard as it has many fathers; failure is an orphan with no takers. <-->  Success is a person born of parents not married to each other; failure does not have parents.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "And now they were leaking all kinds of documents <-->  And now they were hiding away all kinds of documents", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Jonathan drowned in a sea of grief. <-->  Jonathan was happy and jolly.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Her eyes were fireflies <--> Her eyes were dark and deep ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I was home watching the days slip by from my window <-->  I was home doing nothing while days passed", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He felt a wave of anger <-->  He felt an intense anger", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The President brushed aside the accusations <-->  The president basically dismissed all the accusations", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "How can we build a knowledge economy if research is handcuffed? (Barque and Chaumartin 2009) <-->  How can I build a house if when I am handcuffed ?", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The future looks very promising <-->  the future is a rocky mountain", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Adam did not understand the root of the crisis <-->  Adam did not manage to understand what the causes of the crisis were", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The republican convention was a horror show <-->  The republican convention was a joy to follow", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The seeds of change were planted in 1943 <-->  The seeds of several trees were planted in 1943", "label": "incorrect", "model_output": "Incorrect", "best_guess_score": 1}
+{"input": "During the conflict the seeds of peace were planted. <-->  During the conflict the first elements of a peace accord appeared.", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "He had a full bag of memories to unload. <-->  He had a lot of memories to unload.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "People think the old man has a sour temper <-->  people think the old man has a peaceful temper", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The girl broke into the conversation <-->  The girl remained silent during the conversation", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Fear had changed him to a shaken jelly. <-->  Fear made him stronger.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Josh played Bach. <--> Josh played the composer Bach's music.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Ahab was a pyramid but I kept kicking at him. <-->  Ahab was tall and ancient and I kept trying to move him.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You'd better keep away from Bill today because he's in a black mood. <-->  You'd better keep away from Bill today because he's angry and sad.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "my love is a summer day <-->  my feeling of love is hot and falls in july", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The man still had heavy feelings about the situation <-->  The man still felt a hint of suspicion about the situation", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "When I met the boss he seemed bitter about the whole story <--> When I met the boss he seemed indifferent to the whole story ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He felt a wave of anger <-->  he felt an intense anger overcoming him", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The soldiers were devils. <-->  The soldiers were dangerous and aggressive.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "My friend said the project was a nightmare <-->  the project was particularly distressing  according to my friend", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "I was home watching the days slip by from my window <-->  I was home reparing all the windows", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The old tenant gave a bittersweet speech <-->  The old tenant expressed mixed feelings in his speech", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "From its blue vase the rose of evening drops <-->  the sunset makes green the clouds in the black sky", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He always had an interest for the fruit of knowledge <-->  He always had an interest for the pineapple of knowledge", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "While his one live leg made lively echoes along the deck  every stroke of his dead limb sounded like a coffin tap. <-->  While his one live leg made lively echoes along the deck every stroke of his dead limb was amusing.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "life is just a dream in the night <-->  in my life i always dreamed during the night", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Fear had changed him to a shaken jelly. <-->  He was afraid of shaking jelly.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "A break up can leave you with a broken heart. <-->  A break up can make you feel hurt and sad.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "the flowers danced in the wind <-->  the flowers were still", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a real war <-->  At the faculty meeting we talked about real war", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "From its blue vase the rose of evening drops <-->  she dropped the rose in a blue vase", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The sun was a toddler insistently refusing to go to bed: It was past eight thirty and still light. <--> The sun was not setting.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "my love is a summer day <-->  my feeling of love is pleasant and joyful", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He felt a dark sexual desire <-->  He felt a sexual desire hard to interpret or define", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a breeze <--> The faculty meeting was ridiculous ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You'd better keep away from Bill today because he's in a black mood. <-->  Bill is angry and sad and so you'd better keep away from him today.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The children were roses beautiful and forlorn <-->  The children were ugly and angry", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Floating on the waves we saw the abandoned boat a dark sight indeed. <-->  Floating on the waves we saw the abandoned boat a funny sight indeed.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He felt a wave of excitement <-->  he felt a mild disappointment", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Then they cried a sea of tears <-->  Then they cried a lot", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The woman burst in a warm laughter <-->  The woman burst in a mad laughter", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Mark \u2019s comments are an acid bath for my nerves. <-->  Mark \u2019s comments are sarcastic and irritating.", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "Her joy was blinding <-->  Her joy was mild", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She had a bright idea <-->  She had a bad idea", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Rohan bought a Picasso. <--> Rohan bought the painter, Picasso.", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "She arrived at the grocery store with an army of children <-->  She arrived at the grocery store with a massive group of children", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "There were dark corners in his past things he didn't like to remember. <-->  There were excellent achievements in his past things he didn't like to remember.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The great gold apples of light hang from the street\u2019s long bough dripping their light on the faces that drift below <-->  gold apples hang from the street\u2019s long bough dripping their light on the faces that drift below", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "the flowers danced in the wind <-->  the wind danced in the flowers", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "we were sinking in an ocean of grass <-->  we were in a very small prairie", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She was the light of my life. <-->  When it was dark I could see the road because she was shining and bright.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a nightmare <--> The faculty meeting was calm and relaxing ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "They were stirring excitement <-->  They were suffocating excitement", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "All the following sentences have nothing to do with this sentence <-->  He thinks these documents will become secret soon or late", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Andrew's emails were beating a dead horse. <--> Andrew's emails had no success.", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "See the sun  far off  a shriveled orange in a sky gone black <-->  watch the sun in the sky and eat a shriveled orange", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "His declarations sparked a fire in the community <-->  His declarations left the community unimpressed", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He thinks these documents will leak out soon or late <--> He thinks these documents will become secret soon or late ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "the wheels of justice turn slowly <-->  the wheels of a car turn slowly", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "You were the golden boy back then <-->  you were the boy with tons of gold back then", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "O Moon your light is failing and now you are just a cold bow <-->  the Moon became a bow all of a sudden", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Katie\u2019s plan to get into college was a house of cards on a crooked table <-->  Katie\u2019s plan to get into college was hopeless and based on wishful thinking", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "For the end of the year  I was burned and broken <-->  For the end of the year  I was happy and wealthy", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a tragedy <-->  The faculty meeting was highly aggressive", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "A golden sun shines high in the sky <-->  a very expensive sun shines high in the sky", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "an ancient anger exploded in his heart <-->  he was overwhelmed by an anger he had suppressed for a long time", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Alexander's spirits rose. <--> Alexander was sad.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "the crowd was a roaring river <-->  the crowd was huge and noisy", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "David\u2019s eyes were like daggers at Paul when Paul invited his new girlfriend to dance. <-->  David had two daggers when Paul invited his new girlfriend to dance.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "In the worst of times we looked at hope  shining in the dark <-->  In we worst of times we were tired and confused", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The promise between us was a flower <-->  The promise  between us was strange and unsettling", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "That boosted Raavan's spirits. <--> Raavan became happy.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She was ready to turn her hand and heart to anything that promised to yield safety. <-->  She was ready to move her hand and heart to anything that promised to yield safety.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "we were sinking in an ocean of grass <-->  we were sinking in the ocean", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "It is sad to observe the fruits of ignorance. <-->  It is sad to observe the apples of ignorance.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "His declarations sparked a fire in the community <-->  The community generally ignored his declarations", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The faculty meeting was a comedy show <-->  The faculty meeting was ridiculous", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "You will love the new train  it is a heavenly ride <-->  You will love the new train  it is a very boring ride", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "O Moon your light is failing and now you are just a cold bow <-->  the Moon' s light is dimmer and now it has the shape of a bow", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "my love is a summer day <-->  my feeling of love is cold and dark  like a summer day", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He shot down all my arguments <-->  He was convinced by my arguments", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You have to head straight into your fears to win them <--> you have to head straight into your window to win the first price ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "David\u2019s eyes were like daggers at Paul when Paul invited his new girlfriend to dance. <-->  When Paul invited his new girlfriend to dance  David looked at Paul angrily.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "If you are drowning in a sea of minor problems you cannot focus on what matters <-->  If you have a high number of minor problems you cannot focus on what matters", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She had a bright idea <-->  She came up with a brilliant idea", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The soldiers were devils. <-->  The soldiers were peaceful and reassuring.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He felt a sudden red pain through his leg <-->  He felt a sudden intense pain through his leg", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She was the light of my life. <-->  She brought a melancholic feeling into my life.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Rahul drank his glass. <--> Rahul consumed his glass.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I demolished his argument <-->  I demolished his house without listening to his arguments", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Joanna, you disagree? Okay, shoot! <--> Joanna, you disagree? Okay, fire a bullet!", "label": "incorrect", "model_output": "REQUEST_ERROR: litellm.BadRequestError: Error code: 400 - {'error': {'message': \"litellm.BadRequestError: litellm.ContentPolicyViolationError: litellm.ContentPolicyViolationError: AzureException - The response was filtered due to the prompt triggering Azure OpenAI's content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766\\nmodel=azure/gpt-4.1-nano. content_policy_fallback=None. fallbacks=None.\\n\\nSet 'content_policy_fallback' - https://docs.litellm.ai/docs/routing#fallbacks. Received Model Group=azure/gpt-4.1-nano\\nAvailable Model Group Fallbacks=None\", 'type': None, 'param': None, 'code': '400'}}", "best_guess_score": 0}
+{"input": "He said the leaders will have to deal with an ocean of resentment <-->  He said the leaders will have to sail the ocean as soon as possible", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He felt a dark sexual desire <-->  He had a dark fear of sexual desire", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I embarked on life thirty years ago <-->  I started a travel thirty years ago", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Words are weapons <--> Words are powerful and can have significant impact ", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "I was in a very stormy relationship <-->  I was in a very quiet relationship", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You disagree ? Ok  shoot <-->  You disagree ? Ok  shut up", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I was alone in a sea of unknown faces <-->  I was alone in a large number of unknown faces", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Their honey moon was a dream <-->  They highly enjoyed their honey moon", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Krishna is an early bird. <--> Krishna is a bird.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The woman burst in a warm laughter <-->  The woman burst in a nice and pleasant laughter", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He lived in a state of deep terror <-->  He lived experiencing intense feelings of fear and dread", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The faculty meeting was a war <-->  The faculty meeting was ridiculous", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She had a heart of stone. <-->  She had a heart and a stone.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The computer in the classroom was a dinosaur <-->  The computer in the classroom was a lion", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The promise between us was a flower <-->  The promise between us was old and granted", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "They were stirring excitement <-->  They were drinking excitement", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The animal shakes its tail in the air like a whip. <-->  The animal shakes in the air.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He lived in a state of deep terror <-->  He lived in a state of intense terror", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "You'd better keep away from Bill today because he's in a black mood. <-->  You'd better keep away from Bill today because he's happy.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Her joy was blinding <-->  Her joy was green", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You were dying to believe in what you heard <-->  You really wanted to believe in what you heard", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "If wits were pins, Andrew and Bill would be veritable hedgehogs. <--> Andrew and Bill were hedgehogs.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He hated the stench of failure. <-->  He hated a specific stench.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Each blade of grass was a bayonet pointed firmly at our bare feet <-->  Grass was very soft and we could walk bare feet", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Teddy was like a bulldog \u2014 he would get what he wanted. <--> Teddy was a breed of dog who could get anything.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Our whole life we swim against the waves towards the green light of happiness. <-->  Our whole life we ignore happiness and we focus on the waves.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Teddy was like a bulldog \u2014 he would get what he wanted. <--> Teddy will work in a determined and aggressive manner to get what he wants.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The animal shakes its tail in the air like a whip. <-->  The animal shakes its tail in the air and it is short and thick.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The warrior was a lion on the battlefield <--> The warrior was brave and strong on the battlefield ", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "my love is a summer day <-->  my feeling of love is very pleasant  like a summer day", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She arrived at the grocery store with an army of children <-->  She arrived at the grocery store with few children", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She knew she was burning in shame <--> She knew she was feeling an intense shame ", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She had a bright idea <-->  She had a complicated idea", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Time flies <-->  it is time for flies", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Monty swam in a sea of diamonds. <--> Monty was a great swimmer who could swim in a sea filled with diamonds.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Hillary brushed aside the accusations <--> Hillary rejects the accusations", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He thinks these documents will leak out soon or late <--> He thinks these documents will become known soon or late ", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "In the war on terror, American presidents must monitor not only the main terrorist organizations but their offshoots around the world as well <--> In the war on terror, American presidents must monitor not only the main terrorist organizations but their declared enemies around the world as well ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The animal in the middle of the sea was a mountain. <-->  The animal in the middle of the sea was small.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "His condescending attitude made my blood boil. <-->  His condescending attitude made me really angry.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "All of this stirred an uncontrollable excitement in her <--> All of this provoked an uncontrollable excitement in her.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Adam did not understand the root of the crisis <-->  Adam did not understand the reasons of the crisis", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She said that she could smell infidelity from a mile. <-->  She said that everything was fine.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I was on a rollercoaster of emotions. <-->  I was experiencing a period of normality.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The guy was a floating whale in the small swimming pool. <-->  The guy looked short and agile in the small swimming pool.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He pleaded for her forgiveness but Janet was a statue <-->  He pleaded for her forgiveness and Janet smiled", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "They were stirring excitement <-->  They were provoking excitement", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The great gold apples of light hang from the street\u2019s long bough dripping their light on the faces that drift below <-->  people are passing by and lamps hanging along the streets cast light on their faces", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "we were sinking in an ocean of grass <-->  we were surrounded by a vast quantity of grass", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "During the conflict the seeds of peace were planted. <-->  It was the end of the war.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Every person has bitter memories <-->  Every person has joyful memories", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Allister drinks Bordeaux often. <--> Allister drinks the wine from Bordeaux often.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Joanna, you disagree? Okay, shoot! <--> Joanna, you disagree? Okay, tell me why!", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She knew she was burning in shame <--> She knew she was feeling a very mild shame ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She said that she could smell infidelity from a mile. <-->  She said that something smelled very bad.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He kept us in the dark about his plans <--> He did not disclose his plans to us ", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "We dug up some interesting facts <-->  We have researched   and eventually found  some facts of interest", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She had a heart of stone. <-->  She was kind.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The republican convention was a horror show <-->  The republican convention was very distressing", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Allister drinks Bordeaux often. <--> Allister drinks the city of Bordeaux often.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She was the light of my life. <-->  she made it possible to see the road by night", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "we were sinking in an ocean of grass <-->  we were completely surrounded by a large prairie", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Those galaxies were jellyfishes in the abyss of space. <-->  Those galaxies were black in the darkness of space.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Here comes the fool with his foggy brain <-->  Here comes the fool with his confused mind", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Time flies <-->  time seems to pass very quickly", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "I've reached my boiling point. <-->  I am boiling some water.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The captain was a tall and noble statue. <-->  The captain was tall noble and never stopped moving.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I have to kill the program <-->  I have to kill who wrote the program", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "My friend said the project was a nightmare <-->  My friend said the project was very distressing", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She was ready to turn her hand and heart to anything that promised to yield safety. <-->  She was ready to cut her hand and her heart for anything that promised to yield safety.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "then a colorful joy exploded in her chest <-->  then she felt down and depressed", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "You were dying to believe in what you heard <-->  When you were dying you did not believe in what you heard", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Our whole life we swim against the waves towards the green light of happiness. <-->  Our whole life we swim against the waves towards the green light of desperation.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "When it rains in Tokyo the city becomes a sea of umbrellas. <-->  When it rains in Tokyo the city becomes a sea and there are some umbrellas in it.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Jianna shot down all of my arguments. <--> Jianna rejected all of my arguments.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "He thinks these documents will leak out soon or late <--> He thinks these documents will be destroyed ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I was on a rollercoaster of emotions. <-->  I was experiencing extreme changes in my feelings.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She was sure she was living this fantasy romance and kept deluding herself <-->  She was sure she was living in a room of fantasy romance and kept deluding herself", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Fear had changed him to a shaken jelly. <-->  He was not afraid.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "With the crisis the bubble exploded. <-->  With the crisis a bomb exploded.", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "Mark \u2019s comments are an acid bath for my nerves. <-->  Mark \u2019s comments are irritating.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Don't mention Tom 's promotion to Mike as it would be a red flag to a bull. <-->  Don't mention Tom 's promotion to Mike as it is sure to make him kind of sad.", "label": "incorrect", "model_output": "correct", "best_guess_score": 0}
+{"input": "The future looks very promising <-->  the future looks very dark", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The new city was a maze for him. <-->  The new city was simple and clear for him.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "My lawyer is a shark <-->  My lawyer is smart but lovely", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Julia was an overbearing pizza with condescending toppings, and frankly, I was on a diet. <--> Julia was powerfully condescending, and I couldn't bear her attitude.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The President brushed aside the accusations <-->  The president brushed his hair and talked about the accusations", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "an ancient anger exploded in his heart <-->  an anger he had suppressed for a long time overwhelmed him", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The girl broke into the conversation <-->  The girl gradually grew interested into the conversation", "label": "incorrect", "model_output": "Incorrect", "best_guess_score": 1}
+{"input": "Arjun was in love. <--> Arjun was feeling love.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The warrior was a lion on the battlefield <--> The warrior was a coward on the battlefield ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He is in such a hurry he does not run  he flies <-->  He is in such a hurry that he walks", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "life is just a dream in the night <-->  life is just a delusion  something illusory", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The woman had a blue feeling <-->  The woman had a joyous feeling", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Those galaxies were jellyfishes in the abyss of space. <-->  Those galaxies hosted jellyfishes in the abyss of space.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The seeds of change were planted in 1943 <-->  The hopes for a change vanished in 1943", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "There were dark corners in his past things he didn't like to remember. <-->  There were reassuring elements in his past things he didn't like to remember.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "she cut him down with her words <-->  she left him bored with her words", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "A break up can leave you with a broken heart. <-->  A break up can make you feel good and happy.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Joseph has the heart of a lion. <--> Joseph's heart size is similar to a lion's heart size.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The new band was absolutely on fire <-->  the new band was very energetic and having a lot of success", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The warrior was a lion on the battlefield <--> The warrior was very smart on the battlefield ", "label": "incorrect", "model_output": "Incorrect", "best_guess_score": 1}
+{"input": "It always rained in my life  he said <-->  I always have bad things happening to me  he said", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "She said that she could smell infidelity from a mile. <-->  She said that infidelity was apparent to her.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "And now they were leaking all kinds of documents <-->  And now all kinds of documents were being disclosed", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The weeks crawled by until we could meet again <--> The weeks seemed to pass slowly until we could meet again ", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Don't mention Tom 's promotion to Mike as it would be a red flag to a bull. <-->  Don't mention Tom 's promotion to Mike as it would be a crimson flag waving around a bull like animal.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I was alone in a sea of unknown faces <-->  I was alone in an exclusive club of unknown faces", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "We dug up some interesting facts <-->  We have concealed some interesting facts", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The sky was on fire and he felt pain pouring down. <-->  The sky was green and he felt an intense pain.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "And now they were leaking all kinds of documents <-->  And now they were burning all kinds of documents", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "They were burning with desire <-->  They felt an intense desire", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Jane knew these dicsussions were the seeds of a potential conflict <--> Jane knew these discussions were the end of a potential conflict ", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Mark \u2019s comments are an acid bath for my nerves. <-->  Mark made some comments about my nerves.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "With the crisis the bubble exploded. <-->  With the crisis everything stayed the same.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The moment had arrived for killing the past and coming back to life <-->  the moment had arrived to stop thinking about the past and think about the future", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "The darted harpoon was lightning in the sea. <-->  The harpoon was in the sea and there was a lightning flash.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Our whole life we swim against the waves towards the green light of happiness. <-->  Our whole life we try to reach happiness.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "Nobody cares about the roots of modern civilization. <-->  Nobody tries to understand what produced modern civilization.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She was the light of my life. <-->  When I was sad or in a bad mood she would always make me feel better.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The faculty meeting was a comedy show <-->  The faculty meeting was very interesting", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He pleaded for her forgiveness but Janet was a statue <-->  He implored her to forgive him but Janet remained indifferent to his pleads", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "How can we build a \u2019Global economy\u2019 if finance is handcuffed? <--> How can we build a \u2019Global economy\u2019 if finance is restricted?", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She was sure she was living this fantasy romance and kept deluding herself <-->  she wanted to buy a fantasy romance and kept deluding us", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Ahab was a pyramid but I kept kicking at him. <-->  Ahab was absolutely firm in his intentions but I kept trying to change his mind.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "She was sure she was living this fantasy romance and kept deluding herself <-->  she thought she was having a romantic story", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "All the following sentences have nothing to do with this sentence <-->  He thinks these documents will be destroyed", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He pleaded for her forgiveness but Janet was a statue <-->  He pleaded for her forgiveness and Janet forgave him", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "She is fishing in troubled waters. <-->  She is fishing in a lake.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Duryodhan was the black sheep of the Kuru dynasty. <--> Duryodhan was a black colored sheep of the Kuru dynasty.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "The girl could still remember that sweet song <-->  the girl could still remember that scary song", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "During the conflict the seeds of peace were planted. <-->  Janet was trying to start a conflict.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Krishna is an early bird. <--> Krishna wakes up early everyday.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The house was a tomb. <-->  The house was silent.", "label": "correct", "model_output": "incorrect", "best_guess_score": 0}
+{"input": "He was so happy he felt his heart was exploding <-->  he was so happy his car exploded", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Those galaxies were jellyfishes in the abyss of space. <-->  Those galaxies had an alien look in outer space.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "Sachin's truck drinks gasoline. <--> Sachin's truck runs on gasoline.", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The wind howled; the waves dashed their bucklers together - we were in the jaws of death <-->  The wind roared; the waves collided - we were fine.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "He had a full bag of memories to unload. <-->  He had many memories about a bag that he needed to unload.", "label": "incorrect", "model_output": "incorrect", "best_guess_score": 1}
+{"input": "I was in a very stormy relationship <-->  In our relationship we had frequent fights", "label": "correct", "model_output": "correct", "best_guess_score": 1}
+{"input": "The news inflamed your temper. <-->  The news was about a burning factory.", "label": "incorrect", "model_output": "Incorrect", "best_guess_score": 1}
