@@ -9,6 +9,13 @@ from datasets import load_dataset
 from eval_helpers import dnd_process_response, synth_process_response
 from utils import compute_context_lengths
 
+
+try:
+    from secret import HF_API_KEY
+    HF_KEY = True
+except ImportError:
+    HF_API_KEY = None
+
 # Optional dependencies for local backends
 try:
     from vllm import LLM, SamplingParams
@@ -36,7 +43,7 @@ class ModelError:
         return f"ModelError({self.message})"
 
 
-def init_backend(backend, model):
+def init_backend(backend, model, **kwargs):
     """Initialize the backend and return model/tokenizer objects.
 
     For litellm, returns None (no initialization needed).
@@ -52,7 +59,7 @@ def init_backend(backend, model):
                 "vllm is not installed. Install it with: pip install vllm"
             )
         print(f"Initializing vLLM with model {model}...")
-        llm = LLM(model=model)
+        llm = LLM(model=model, hf_token=HF_API_KEY, tensor_parallel_size = kwargs.get('tensor_parallel_size', 1))
         return llm
 
     elif backend == "hf":
@@ -365,12 +372,13 @@ def launch(
     model_prefix,
     base_url,
     backend,
+    tensor_parallel_size
 ):
     split_to_use = "context_window_text"
     api_args = {}
 
     # Initialize backend and set up function pointers
-    client = init_backend(backend, model)
+    client = init_backend(backend, model, tensor_parallel_size=tensor_parallel_size)
 
     if backend == "litellm":
         def call_model(messages, use_cache=False):
@@ -732,6 +740,12 @@ if __name__ == "__main__":
         help="Backend to use for inference (default: litellm)",
     )
 
+    parser.add_argument(
+         "--tensor_parallel_size",
+         default=1, type=int,
+         help="how many GPUs to shard model over (default: data parallel only)"
+    )
+
     args = parser.parse_args()
 
     launch(
@@ -746,4 +760,5 @@ if __name__ == "__main__":
         args.model_prefix,
         args.base_url,
         args.backend,
+        args.tensor_parallel_size,
     )
