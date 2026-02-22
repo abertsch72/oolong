@@ -372,7 +372,8 @@ def launch(
     model_prefix,
     base_url,
     backend,
-    tensor_parallel_size
+    tensor_parallel_size,
+    validation=False,
 ):
     split_to_use = "context_window_text"
     api_args = {}
@@ -412,12 +413,13 @@ def launch(
         batch_by_context_window = False
 
     # download data
+    hf_split = "validation" if validation else "test"
     if dataset == "synth":
-        data = load_dataset("oolongbench/oolong-synth")["test"]
+        data = load_dataset("oolongbench/oolong-synth")[hf_split]
         process_response = synth_process_response
     else:
         # use 'toy_dnd' config to try out the DnD dataset
-        data = load_dataset("oolongbench/oolong-real", "dnd")["test"]
+        data = load_dataset("oolongbench/oolong-real", "dnd")[hf_split]
         process_response = dnd_process_response
         # we compute token counts based on the model's tokenizer
         data = compute_context_lengths(data, model)
@@ -425,6 +427,7 @@ def launch(
     results_dir = "results"
     do_cache = True
     safemodelname = model.split("/")[-1]  # +"-labels"
+    dataset_dir = f"{dataset}-validation" if validation else dataset
 
     if labels:
         safemodelname += "-labels"
@@ -435,7 +438,7 @@ def launch(
         api_args["reasoning_effort"] = reasoning_level
         api_args["extra_body"] = {"allowed_openai_params": ["reasoning_effort"]}
 
-    Path(f"{results_dir}/{dataset}/{safemodelname}").mkdir(parents=True, exist_ok=True)
+    Path(f"{results_dir}/{dataset_dir}/{safemodelname}").mkdir(parents=True, exist_ok=True)
 
     # sort by context window ID (to enable caching)
     data = data.sort("context_window_id")
@@ -455,7 +458,7 @@ def launch(
     )
 
     # potentially init from prior partial run
-    full_results_path = f"{results_dir}/{dataset}/{safemodelname}/full_output.jsonl"
+    full_results_path = f"{results_dir}/{dataset_dir}/{safemodelname}/full_output.jsonl"
     if os.path.exists(full_results_path):
         ids_to_skip = []
         correct = 0
@@ -576,12 +579,12 @@ def launch(
                 # save partial and full output for this batch
 
                 with jsonlines.open(
-                    f"{results_dir}/{dataset}/{safemodelname}/full_output.jsonl", "a"
+                    f"{results_dir}/{dataset_dir}/{safemodelname}/full_output.jsonl", "a"
                 ) as f:
                     for line in current_outputs:
                         f.write(line)
                 with jsonlines.open(
-                    f"{results_dir}/{dataset}/{safemodelname}/partial_output_{output_counter - len(this_window_data)}_{output_counter - 1}.jsonl",
+                    f"{results_dir}/{dataset_dir}/{safemodelname}/partial_output_{output_counter - len(this_window_data)}_{output_counter - 1}.jsonl",
                     "w",
                 ) as f:
                     for line in current_outputs:
@@ -627,12 +630,12 @@ def launch(
                 # save partial and full output for this batch
 
                 with jsonlines.open(
-                    f"{results_dir}/{dataset}/{safemodelname}/full_output.jsonl", "a"
+                    f"{results_dir}/{dataset_dir}/{safemodelname}/full_output.jsonl", "a"
                 ) as f:
                     for line in current_outputs:
                         f.write(line)
                 with jsonlines.open(
-                    f"{results_dir}/{dataset}/{safemodelname}/partial_output_{output_counter - len(batch)}_{output_counter - 1}.jsonl",
+                    f"{results_dir}/{dataset_dir}/{safemodelname}/partial_output_{output_counter - len(batch)}_{output_counter - 1}.jsonl",
                     "w",
                 ) as f:
                     for line in current_outputs:
@@ -644,7 +647,7 @@ def launch(
 
     except Exception as e:
         error_file_loc = (
-            f"{results_dir}/{dataset}/{safemodelname}/error_partial_results.jsonl"
+            f"{results_dir}/{dataset_dir}/{safemodelname}/error_partial_results.jsonl"
         )
         with jsonlines.open(error_file_loc, "w") as f:
             for line in all_outputs:
@@ -655,13 +658,13 @@ def launch(
         )
 
     with jsonlines.open(
-        f"{results_dir}/{dataset}/{safemodelname}/full_output.jsonl", "a"
+        f"{results_dir}/{dataset_dir}/{safemodelname}/full_output.jsonl", "a"
     ) as f:
         for line in current_outputs:
             f.write(line)
 
     total_count += len(data)
-    with open(f"{results_dir}/{dataset}/{safemodelname}/overall.txt", "w") as f:
+    with open(f"{results_dir}/{dataset_dir}/{safemodelname}/overall.txt", "w") as f:
         summary = f"Overall score for {model} on {total_count} examples: {correct}/{total_count} = {correct / total_count}"
         f.write(summary)
         print(summary)
@@ -746,6 +749,13 @@ if __name__ == "__main__":
          help="how many GPUs to shard model over (default: data parallel only)"
     )
 
+    parser.add_argument(
+        "--validation",
+        action="store_true",
+        default=False,
+        help="Use validation split instead of test split (default: False)",
+    )
+
     args = parser.parse_args()
 
     launch(
@@ -761,4 +771,5 @@ if __name__ == "__main__":
         args.base_url,
         args.backend,
         args.tensor_parallel_size,
+        args.validation,
     )
